@@ -1,56 +1,14 @@
 #import "../template.typ": *
 
-= Unit 3: Digital innovation
-
-== Chapter 8: Interactions Between Users, Data, and Digital Systems
-
-*Aims and Objectives:*
-- Explore the meaning and importance of innovation.
-- Recognise components of web, mobile, interactive, and intelligent systems.
-- Understand advanced data processes.
-
-#key-info[
-Innovation isn't just about inventing something entirely new; it often involves applying existing technologies in novel ways to solve problems more efficiently or open up new opportunities.
-]
-
-=== The Impact of Innovation
-Emerging technologies like machine learning, neural networks, and natural language processing are driving a new wave of digital innovation. They transform how systems interact with data and users.
-
-#historical[
-The concept of artificial intelligence dates back to antiquity, but the field was formally founded at a conference at Dartmouth College in 1956. Early pioneers believed that a machine as intelligent as a human being would exist within a generation!
-]
-
-=== Revision Questions
-1. Define 'innovation' in the context of digital solutions.
-2. List three components of a web application architecture.
-3. How might natural language processing improve human-computer interaction?
-
----
-
-== Chapter 9: Real-world Problems and Solution Requirements
-
-*Aims and Objectives:*
-- Explore project management tools.
-- Determine specific requirements and success criteria for digital solutions.
-- Use modular programming.
-
-#women-in-tech[
-Radia Perlman is an American software designer and network engineer. She is most famous for her invention of the Spanning Tree Protocol (STP), which is fundamental to the operation of network bridges and keeps the internet running smoothly!
-]
-
-=== Revision Questions
-1. Why are project management tools essential for software development?
-2. Explain the concept of modularity in programming.
-3. What is the difference between an input constraint and an environmental limitation?
-
----
-
 == Chapter 10: Innovative Digital Solutions
 
 *Aims and Objectives:*
 - Generate user-interface prototypes.
 - Develop conceptual models and generate program modules.
 - Evaluate prototype solutions against success criteria.
+
+=== Evaluating Prototypes
+Evaluation is not just checking if the code runs. It involves heuristic reviews of the interface against useability principles and desk-checking algorithmic steps.
 
 #code-columns(
   "// Worked Example 1: Read File
@@ -164,10 +122,6 @@ def validate_age(age):
 # Write a Python function to perform a linear search.
 "
 )
-
-
-=== Evaluating Prototypes
-Evaluation is not just checking if the code runs. It involves heuristic reviews of the interface against useability principles and desk-checking algorithmic steps.
 
 === Revision Questions
 1. Describe two methods for evaluating a user interface prototype.

@@ -5,10 +5,26 @@
   author: "Digital Solutions Team"
 )
 
-#include "chapters/unit1.typ"
-#include "chapters/unit2.typ"
-#include "chapters/unit3.typ"
-#include "chapters/unit4.typ"
+= Unit 1: Creating with code
+#include "chapters/chapter1.typ"
+#include "chapters/chapter2.typ"
+#include "chapters/chapter3.typ"
+#include "chapters/chapter4.typ"
+
+= Unit 2: Application and data solutions
+#include "chapters/chapter5.typ"
+#include "chapters/chapter6.typ"
+#include "chapters/chapter7.typ"
+
+= Unit 3: Digital innovation
+#include "chapters/chapter8.typ"
+#include "chapters/chapter9.typ"
+#include "chapters/chapter10.typ"
+
+= Unit 4: Digital impacts
+#include "chapters/chapter11.typ"
+#include "chapters/chapter12.typ"
+#include "chapters/chapter13.typ"
 
 = Glossary
 #v(1em)

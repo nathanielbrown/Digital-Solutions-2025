@@ -1,8 +1,7 @@
 #import "../template.typ": *
 
-= Unit 1: Creating with code
-
 == Chapter 1: Understanding Digital Problems
+
 
 *Aims and Objectives:*
 - Understand methods of breaking down problems into parts using computational thinking.
@@ -19,7 +18,7 @@ Every piece of software, application, or system was designed to solve a problem.
 
 #quote("The computer was born to solve problems that did not exist before.", author: "Bill Gates") Whether it is a simple mobile app to track your daily steps or a complex machine learning algorithm for medical diagnosis, understanding the core problem is paramount.
 
-#historical[
+#historical(source: "General History")[
 The first computer bug was an actual bug! In 1947, Grace Hopper and her team found a moth trapped in a relay of the Harvard Mark II computer. They taped it into the logbook, noting it as the first actual case of "bug" being found.
 ]
 
@@ -199,71 +198,3 @@ def sum_evens(numbers):
 3. What is the significance of understanding the scope and constraints before writing code?
 
 ---
-
-== Chapter 2: User Experiences and Interfaces
-
-*Aims and Objectives:*
-- Recognise the meaning and importance of user experience (UX).
-- Understand useability principles including accessibility, effectiveness, safety, utility, and learnability.
-- Explore the elements and principles of visual communication.
-
-#key-info[
-User Experience (UX) encompasses all aspects of the end-user's interaction with the company, its services, and its products. Good UX is invisible, while bad UX is immediately noticeable!
-]
-
-=== Introduction to UX
-The user interface is the bridge between the human and the digital system. Designing effective interfaces requires careful consideration of the user's needs, capabilities, and the environment in which they operate.
-
-#figure(
-  image("../images/ui_vs_ux.png", width: 80%),
-  caption: [A humorous take on UI vs UX.#footnote[Source: xkcd.com]]
-)
-
-For further insights on creating great user experiences, watch this video on the principles of UX design: https://www.youtube.com/watch?v=O94kYyzqcIQ
-
-=== Revision Questions
-1. Explain the difference between UI and UX.
-2. List and define three useability principles.
-3. How do visual communication principles enhance the learnability of an application?
-
----
-
-== Chapter 3: Algorithms and Programming Techniques
-
-*Aims and Objectives:*
-- Recognise and describe programming syntax and rules.
-- Understand that simple algorithms consist of input, process, and output.
-- Develop algorithms using pseudocode.
-
-=== Introduction to Algorithms
-An algorithm is simply a step-by-step set of instructions used to solve a specific problem. Before we write code in a specific language, we often design the logic using pseudocode.
-
-#historical[
-Ada Lovelace is often considered the first computer programmer. In the 1840s, she wrote an algorithm intended to be executed by Charles Babbage's early mechanical general-purpose computer, the Analytical Engine.
-]
-
-#women-in-tech[
-Margaret Hamilton was the Director of the Software Engineering Division of the MIT Instrumentation Laboratory, which developed on-board flight software for NASA's Apollo program. She coined the term \"software engineering\".
-]
-
-=== Revision Questions
-1. What are the three fundamental stages of a simple algorithm?
-2. Why is pseudocode useful when designing digital solutions?
-3. Name the five basic features of programming.
-
----
-
-== Chapter 4: Programmed Solutions
-
-*Aims and Objectives:*
-- Use a text-based language to apply operators and logic.
-- Generate reusable coded components.
-- Evaluate and refine programmed solutions.
-
-=== Bringing It All Together
-Once the logic is defined and the interface is designed, the final step in Unit 1 is implementing the programmed solution. This involves writing syntax-correct code, debugging, and testing.
-
-=== Revision Questions
-1. Differentiate between syntax errors and logic errors.
-2. Explain the scope of a variable and the difference between local and global scope.
-3. Why are consistent naming conventions important in programming?

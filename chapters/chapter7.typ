@@ -1,56 +1,5 @@
 #import "../template.typ": *
 
-= Unit 2: Application and data solutions
-
-== Chapter 5: Data-driven Problems and Solution Requirements
-
-*Aims and Objectives:*
-- Understand the nature of data-driven problems.
-- Recognise data types, constraints, and primary and foreign keys.
-- Explore the social and economic impacts of data storage.
-
-#key-info[
-Data is raw, unorganised facts. Information is data that has been processed, organised, structured, or presented in a given context to make it useful. Wisdom is the application of this information to make decisions.
-]
-
-=== The Nature of Data-Driven Problems
-In the modern world, data is being generated at an unprecedented rate. Managing this data—inserting, validating, structuring, and retrieving it—is the core of data-driven digital solutions.
-
-#historical[
-In 1970, Edgar F. Codd, a computer scientist at IBM, published a paper titled "A Relational Model of Data for Large Shared Data Banks". This paper laid the foundation for relational databases, which are still the dominant method of storing structured data today!
-]
-
-=== Modeling Data
-Before writing any code or SQL queries, it is essential to model the data and its flow through a system. This is done using context diagrams and Data Flow Diagrams (DFDs).
-
-=== Revision Questions
-1. Differentiate between data, information, and wisdom.
-2. What are the potential privacy impacts of storing user data in a cloud database?
-3. Define the purpose of a primary key in a relational database.
-
----
-
-== Chapter 6: Data and Programming Techniques
-
-*Aims and Objectives:*
-- Understand relational database structures and normalisation.
-- Differentiate between data validation and verification.
-- Develop algorithms for data processing.
-
-=== Database Structures and Normalisation
-Normalisation is the process of organising data in a database to reduce redundancy and improve data integrity. The syllabus requires understanding up to Third Normal Form (3NF).
-
-#women-in-tech[
-Dr. Karen Spärck Jones was a pioneering British computer scientist whose work in the 1970s introduced the concept of Inverse Document Frequency (IDF). Her work is foundational to the search engines we use every day to query massive databases!
-]
-
-=== Revision Questions
-1. Explain the difference between data validation and data verification.
-2. Describe the conditions required for a database table to be in Third Normal Form (3NF).
-3. Why is reducing data redundancy important?
-
----
-
 == Chapter 7: Prototype Data Solutions
 
 *Aims and Objectives:*

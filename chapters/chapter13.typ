@@ -1,50 +1,5 @@
 #import "../template.typ": *
 
-= Unit 4: Digital impacts
-
-== Chapter 11: Digital Methods for Exchanging Data
-
-*Aims and Objectives:*
-- Recognise encryption and authentication strategies.
-- Understand network performance metrics and transmission principles.
-- Use methods like REST, JSON, and XML for data exchange.
-
-#key-info[
-When transferring data over a network, security is paramount. Encryption ensures confidentiality, hashing ensures integrity, and authentication ensures identity.
-]
-
-=== Encryption Algorithms
-Symmetric encryption uses the same key to encrypt and decrypt data (e.g., AES). Asymmetric encryption uses a public key to encrypt and a private key to decrypt (e.g., RSA).
-
-#historical[
-The Caesar cipher, named after Julius Caesar, is one of the simplest and most widely known encryption techniques. It is a substitution cipher where each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet.
-]
-
-=== Revision Questions
-1. Differentiate between symmetric and asymmetric encryption.
-2. Explain how a hashing algorithm ensures data integrity.
-3. Compare JSON and XML as formats for data exchange.
-
----
-
-== Chapter 12: Complex Digital Data Exchange Problems
-
-*Aims and Objectives:*
-- Analyse factors and risks affecting data security and privacy.
-- Develop data flow diagrams for complex exchanges.
-- Evaluate the impact of emerging technologies in data exchange.
-
-#women-in-tech[
-Joan Clarke was an English cryptanalyst and numismatist best known for her work as a code-breaker at Bletchley Park during the Second World War. Her work on the Enigma project that decrypted Nazi Germany's secret communications earned her awards and citations.
-]
-
-=== Revision Questions
-1. What are the Australian Privacy Principles, and how do they impact software developers?
-2. Define latency and jitter in the context of network performance.
-3. How can machine learning be used to detect anomalies in data exchange networks?
-
----
-
 == Chapter 13: Prototype Digital Data Exchanges
 
 *Aims and Objectives:*

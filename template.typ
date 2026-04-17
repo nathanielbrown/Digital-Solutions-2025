@@ -135,7 +135,7 @@
 ]
 
 #let key-info(body) = callout("Key Information", body, rgb(230, 240, 255), "💡")
-#let historical(body) = callout("Historical Context", body, rgb(255, 240, 220), "🏛️")
+#let historical(body, source: "") = callout("Historical Context", [ #body #if source != "" [ \ #text(size: 9pt, style: "italic", "Source: " + source) ] ], rgb(255, 240, 220), "🏛️")
 #let women-in-tech(body) = callout("Women in Tech", body, rgb(250, 230, 250), "👩‍💻")
 
 // Quotes function
