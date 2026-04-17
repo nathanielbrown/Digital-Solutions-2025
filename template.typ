@@ -33,31 +33,39 @@
         if elems != () {
           let current-heading = elems.last().body
 
-          let color = rgb(230, 230, 230) // Default grey tab
+          let color = none
 
           // Use typst's repr to get a string representation of the content for matching
           let title_str = repr(current-heading)
 
           if "Chapter 1:" in title_str { color = chapter-colors.at("Chapter 1") }
-          if "Chapter 2:" in title_str { color = chapter-colors.at("Chapter 2") }
-          if "Chapter 3:" in title_str { color = chapter-colors.at("Chapter 3") }
-          if "Chapter 4:" in title_str { color = chapter-colors.at("Chapter 4") }
-          if "Chapter 5:" in title_str { color = chapter-colors.at("Chapter 5") }
-          if "Chapter 6:" in title_str { color = chapter-colors.at("Chapter 6") }
-          if "Chapter 7:" in title_str { color = chapter-colors.at("Chapter 7") }
-          if "Chapter 8:" in title_str { color = chapter-colors.at("Chapter 8") }
-          if "Chapter 9:" in title_str { color = chapter-colors.at("Chapter 9") }
-          if "Chapter 10:" in title_str { color = chapter-colors.at("Chapter 10") }
-          if "Chapter 11:" in title_str { color = chapter-colors.at("Chapter 11") }
-          if "Chapter 12:" in title_str { color = chapter-colors.at("Chapter 12") }
-          if "Chapter 13:" in title_str { color = chapter-colors.at("Chapter 13") }
+          else if "Chapter 2:" in title_str { color = chapter-colors.at("Chapter 2") }
+          else if "Chapter 3:" in title_str { color = chapter-colors.at("Chapter 3") }
+          else if "Chapter 4:" in title_str { color = chapter-colors.at("Chapter 4") }
+          else if "Chapter 5:" in title_str { color = chapter-colors.at("Chapter 5") }
+          else if "Chapter 6:" in title_str { color = chapter-colors.at("Chapter 6") }
+          else if "Chapter 7:" in title_str { color = chapter-colors.at("Chapter 7") }
+          else if "Chapter 8:" in title_str { color = chapter-colors.at("Chapter 8") }
+          else if "Chapter 9:" in title_str { color = chapter-colors.at("Chapter 9") }
+          else if "Chapter 10:" in title_str { color = chapter-colors.at("Chapter 10") }
+          else if "Chapter 11:" in title_str { color = chapter-colors.at("Chapter 11") }
+          else if "Chapter 12:" in title_str { color = chapter-colors.at("Chapter 12") }
+          else if "Chapter 13:" in title_str { color = chapter-colors.at("Chapter 13") }
 
-          place(
-            top + right,
-            dx: 2.5cm, // move to bleed
-            dy: 5cm,
-            rect(fill: color, width: 1cm, height: 4cm)
-          )
+          if color != none {
+            place(
+              top + left,
+              dx: -2.5cm,
+              dy: -2.5cm,
+              rect(fill: color, width: 21cm, height: 1cm)
+            )
+            place(
+              bottom + left,
+              dx: -2.5cm,
+              dy: 2.5cm,
+              rect(fill: color, width: 21cm, height: 1cm)
+            )
+          }
         }
       }
     }),
