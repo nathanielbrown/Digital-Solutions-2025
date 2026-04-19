@@ -7,8 +7,16 @@
 - Analyze scope, constraints, and risks in complex data exchange environments.
 - Manage variable scope and decomposition for large-scale problems.
 - Link DFD components to explain complex data processes.
-- Evaluate inbuilt libraries and frameworks for solution suitability.
 - Communicate technical ideas using professional language and mode-appropriate features.
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=MhU0x8i6m-s")[#image("../images/yt_sql.jpg", width: 100%)],
+    [*Video*: IA3 Data Exchange Overview -- Navigating the complexities of secure data transmission. \ https://www.youtube.com/watch?v=MhU0x8i6m-s],
+  )
+]
 
 == Problem Scoping and Variable Management
 The first step in addressing complex data exchange problems is establishing clear boundaries and managing the data's accessibility.
@@ -27,7 +35,7 @@ Managing data accessibility is critical for security and efficiency:
 ]
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/xkcd_code_quality.jpg", width: 80%),
   caption: [Code quality is paramount in complex, multi-layered systems.#footnote[Source: xkcd.com/1513]],
@@ -57,7 +65,7 @@ The potential role of *emerging technologies*, such as machine learning for anom
 - *Integrity*: Ensuring data remains accurate and valid [cite: 785].
 
 
-#pagebreak(weak: true)
+
 #info-box[
   #grid(
     columns: (100pt, 1fr),
@@ -74,7 +82,7 @@ Modeling the flow of data and evaluating available resources are essential for p
 *#idx("Data Flow Diagrams (DFD)")* are developed to analyze and explain the system's data processes. By linking external entities, data sources, processes, and storage, DFDs provide a clear visual roadmap of how information moves through the environment [cite: 786].
 
 
-#pagebreak(weak: true)
+
 #info-box[
   #grid(
     columns: (100pt, 1fr),
@@ -99,7 +107,7 @@ Students must determine the best tools for their solution:
 - *Frameworks & Tools*: Evaluating available code libraries and frameworks to determine their suitability for the identified problem [cite: 790].
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/dfd_symbols.jpg", width: 80%),
   caption: [Standard symbols for modeling data flow in complex exchange environments.],
@@ -120,7 +128,7 @@ Detailed algorithmic steps are developed using *pseudocode*. This allows student
 Code comments and annotations are used to explain the purpose of specific code or algorithm statements. This documentation is vital for maintainability, especially in complex environments where multiple developers may collaborate [cite: 795].
 
 
-#pagebreak(weak: true)
+
 #info-box[
   #grid(
     columns: (100pt, 1fr),
@@ -132,6 +140,35 @@ Code comments and annotations are used to explain the purpose of specific code o
 
 #tip-box[
   *Joan Clarke* #index("Clarke, Joan") was an English cryptanalyst and numismatist best known for her work as a code-breaker at Bletchley Park during the Second World War. Her work on the Enigma project that decrypted Nazi Germany's secret communications earned her awards and citations.#footnote[Source: Hinsley, F. H., & Stripp, A. (Eds.). (1993). *Codebreakers: The Inside Story of Bletchley Park*. Oxford University Press.]
+]
+
+== Transmission Media and Protocols
+The physical and logical layers of the network determine the efficiency of data exchange.
+
+=== #idx("OSI Model") and #idx("TCP/IP")
+Networking is understood through layers. While TCP/IP is the practical standard, the *OSI (Open Systems Interconnection) Model* provides a theoretical framework with seven layers:
+1. *Physical*: Hardware, cables, and bits.
+2. *Data Link*: MAC addresses and frames.
+3. *Network*: IP addresses and routing.
+4. *Transport*: TCP/UDP segments and error checking.
+5. *Session*: Communication management.
+6. *Presentation*: Data formatting and encryption.
+7. *Application*: End-user services (HTTP, FTP).
+
+#info-box[
+  *The Layered Approach*
+  Understanding network layers helps developers troubleshoot where a problem might be—whether it's a physical cable unplugged (Layer 1) or a firewall blocking a specific port (Layer 4).
+]
+
+=== Transmission Principles
+Core principles govern how data moves through a network:
+- *Packet Switching*: Chopping large files into small, manageable packets.
+- *Routing*: Finding the most efficient path across multiple networks.
+- *Switching*: Connecting devices within a single Local Area Network (LAN).
+
+#info-box[
+  *Traceroute: Visualizing the Path*
+  You can see every "hop" a packet takes by running the `tracert` (Windows) or `traceroute` (Mac/Linux) command in your terminal. This shows the IP address of every router your data passes through on its way to a destination like `google.com`.
 ]
 
 === Professional Communication and Presentation
@@ -156,13 +193,28 @@ Presenting data and ideas to a technical audience involves using a variety of mo
 - *Spoken*: Presentations and technical walkthroughs [cite: 800, 801].
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/visual_comm.jpg", width: 80%),
   caption: [Using diverse communication modes to present complex technical solutions.],
 )
 
+== Online Resources
+
+To master the complexities of network architecture and secure data transmission, consult these professional technical resources:
+
+- *Network Analysis and Infrastructure*:
+  - #link("https://www.wireshark.org/")[Wireshark] -- The world's foremost network protocol analyzer, essential for inspecting packet-level data exchange.
+  - #link("https://www.cloudflare.com/learning/network-layer/what-is-the-osi-model/")[Cloudflare Learning: The OSI Model] -- A clear, modern explanation of the seven layers of network communication.
+  - #link("https://www.geeksforgeeks.org/layers-of-osi-model/")[GeeksforGeeks: Layers of the OSI Model] -- A detailed technical breakdown of the protocols and standards at each network layer.
+- *Security and Privacy Standards*:
+  - #link("https://www.oaic.gov.au/privacy/australian-privacy-principles")[OAIC: Australian Privacy Principles] -- The regulatory framework for managing privacy risks in complex data environments.
+  - #link("https://www.cyber.gov.au/acsc/view-all-content/essential-eight")[ACSC: The Essential Eight] -- A series of baseline mitigation strategies to help organizations protect their systems.
+- *Professional Documentation*:
+  - #link("https://www.lucidchart.com/pages/data-flow-diagram/gane-sarson-notation")[Lucidchart: Gane-Sarson Notation Guide] -- A professional reference for modeling complex data processes in DFDs.
+
 == Revision Questions
+
 1. Contrast the scope of *local* and *global* variables. Why is local scope generally preferred?
 2. How does *decomposition* help in managing the risks associated with data exchange?
 3. Describe the four components of a *Data Flow Diagram (DFD)*.
@@ -171,3 +223,4 @@ Presenting data and ideas to a technical audience involves using a variety of mo
 6. List three different communication modes used to present technical ideas to stakeholders.
 
 ---
+

@@ -28,15 +28,15 @@ A successful interface is driven by people and their specific needs. Designers m
 ]
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/xkcd_ui_ux.jpg", width: 60%),
   caption: [A commentary on the industry's distinction between UI and UX.#footnote[Source: xkcd.com/2141]],
 )
 
+Understanding these foundations is critical for any designer. The following video introduces the core concepts of usability and its role in successful projects.
 
-#pagebreak(weak: true)
-#info-box[
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -45,72 +45,136 @@ A successful interface is driven by people and their specific needs. Designers m
   )
 ]
 
+Beyond just usability, it is important to distinguish between the 'how it works' (UX) and the 'how it looks' (UI) aspects of a solution.
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=wIuVvCuiJhU")[#image("../images/yt_ux_ui.jpg", width: 100%)],
+    [*Video*: UX vs UI -- Understanding the difference between how it works and how it looks. \ https://www.youtube.com/watch?v=wIuVvCuiJhU],
+  )
+]
+
+
 == Usability Principles
 
 To ensure a solution is high-quality, it must be assessed against five core *usability principles*. These serve as the "success criteria" for an effective user interface.
 
 === 1. #idx("Accessibility")
-Ensuring the system can be used by people with the widest range of capabilities.
-- *Example*: A banking app that includes high-contrast modes for visually impaired users and voice-over support for blind users.
-- *Key Tool*: *#idx("WCAG") (Web Content Accessibility Guidelines)* provide an international standard for making web content more accessible.
+Accessibility is the ability to be used by many different people, even people with disabilities. Accessibility guidelines are based on four principles (often referred to as POUR):
+- *Perceivable:* Information and UI components must be presented in ways users can perceive (e.g. adjust color contrast or font size).
+- *Operable:* UI components must be operable in ways users can operate (e.g. keyboard navigation).
+- *Understandable:* Information and UI operation must be understandable.
+- *Robust:* Content must be robust enough to be interpreted by a wide variety of users and assistive technologies.
 
+#figure(
+  image("../images/up_accessability.png", width: 60%),
+  caption: [Accessibility principles.],
+)
 
-#pagebreak(weak: true)
-#info-box[
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
-    link("https://www.youtube.com/watch?v=20SHvU2PKsM")[#image("../images/yt_accessibility.jpg", width: 100%)],
-    [*Video*: What is Web Accessibility? -- An introduction to inclusive design for all users. \ https://www.youtube.com/watch?v=20SHvU2PKsM],
+    link("https://www.youtube.com/watch?v=Fy0aCDmgnxg")[#image("../images/yt_accessibility_godot.jpg", width: 100%)],
+    [*Video*: Accessibility in Design -- Practical steps for inclusive digital solutions. \ https://www.youtube.com/watch?v=Fy0aCDmgnxg],
   )
 ]
 
+#info-box[
+  *Usability Principles Checklist*: What to look for during evaluation.
+  #table(
+    columns: (1fr, 2fr),
+    [*Principle*], [*What to look for*],
+    [Accessibility], [Responsive design, screen reader compatibility, semantic tags.],
+    [Learnability], [Consistent layout, familiar iconography, help features/tooltips.],
+    [Safety], [Error feedback, undo/redo mechanisms, input validation.],
+    [Utility], [Does it provide all the required functionality?],
+    [Effectiveness], [Can users achieve their goals accurately and efficiently?],
+  )
+]
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=TgqeRTwZvIo")[#image("../images/yt_usability_principles.jpg", width: 100%)],
+    [*Video*: The 5 Usability Principles -- A detailed look at the core standards of quality design. \ https://www.youtube.com/watch?v=TgqeRTwZvIo],
+  )
+]
+
+
 === 2. #idx("Effectiveness")
-How well the system performs the tasks it was designed for. Can the user achieve their goal accurately and completely?
-- *Example*: A GPS application is effective if it provides the most efficient route and the user reaches their destination without getting lost.
+Effectiveness is the ability of users to use the system to do the work they need to do. Users need to be able to interact with a digital solution quickly and easily. You can improve effectiveness by addressing:
+- *Goal Achievement*: the ability to complete intended tasks.
+- *Accuracy*: the ability to perform tasks with minimal errors.
+- *Efficiency*: the ability to perform tasks in a timely manner.
+- *Quality of Outcome*: the ability of the output to meet user expectations.
+
+#figure(
+  image("../images/up_effectiveness.png", width: 60%),
+  caption: [Effectiveness principles.],
+)
 
 === 3. #idx("Safety")
-Protecting the user from dangerous conditions and undesirable situations. This includes protecting data from accidental loss and ensuring the system is resilient against malicious input.
-- *Example*: "Confirm Deletion" dialogs in a photo app prevent accidental loss of data. "Undo" functionality (Ctrl+Z) allows users to recover from mistakes quickly.
+Safety is the ability for users to make errors and recover from the mistake. It considers: How many errors do users make? How severe are they? How easily can users recover? Safety is protecting users from dangerous errors (e.g. losing all data).
+- *Error Prevention*: making it difficult to make mistakes.
+- *Error Recovery*: providing mechanisms to recover from mistakes (e.g., Undo).
+- *Warning Systems*: warning users of potential dangers before they occur.
 
+#figure(
+  image("../images/up_safety.png", width: 60%),
+  caption: [Safety principles.],
+)
 
-#pagebreak(weak: true)
+A classic example of safety in technical systems is the prevention of accidental data corruption through robust input validation.
+
 #figure(
   image("../images/xkcd_safety.jpg", width: 60%),
   caption: [The classic 'Bobby Tables' comic illustrating the importance of input validation for safety.#footnote[Source: xkcd.com/327]],
 )
 
+=== 4. #idx("Utility")
+Utility is the ability of the system to provide all the functionality that users need. Does the solution have all the components needed to complete the task?
+- *Relevance*: provide all relevant features and only relevant features.
+- *Completeness*: ensure the user can complete tasks without resorting to alternative methods.
+- *Availability*: ensure necessary functions are available when needed.
+- *Understandability*: ensure users understand how to use features.
 
-#pagebreak(weak: true)
 #figure(
-  image("../images/xkcd_passwords.jpg", width: 60%),
-  caption: [A critique of security measures that make systems unusable for humans but easy for computers to crack.#footnote[Source: xkcd.com/936]],
+  image("../images/up_utility.png", width: 60%),
+  caption: [Utility principles.],
 )
 
-=== 4. #idx("Utility")
-Providing the right kind of functionality. Does the app actually do what the user needs it to do?
-- *Example*: A calculator app that only adds numbers has low utility if the user needs to calculate square roots.
-
 === 5. #idx("Learnability")
-How easy it is for users to accomplish basic tasks the first time they encounter the design.
-- *Example*: Using a "trash can" icon for deleting files is highly learnable because it maps to a real-world "mental model."
+Learnability is concerned with how easy a system is to learn. How intuitive or memorable is the digital solution?
+- *Clear and Consistent Design*: Use a clean interface with clear visual hierarchy.
+- *Intuitive Navigation*: easily identifiable navigation elements.
+- *Interactive Tutorials*: introduce features gradually.
+- *Visual Feedback*: immediate feedback when a user interacts.
+
+#figure(
+  image("../images/up_learnability.png", width: 60%),
+  caption: [Learnability principles.],
+)
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/xkcd_bad_code.jpg", width: 60%),
   caption: [The relationship between code quality and user experience: bad code eventually leads to a broken interface.#footnote[Source: xkcd.com/1926]],
 )
 
+When these principles are applied correctly, they form the five pillars that support every high-quality digital solution.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/usability_principles.jpg", width: 60%),
   caption: [The five pillars of usability: the foundation of high-quality digital solutions.#footnote[Source: Gemini]],
 )
 
+These pillars manifest in a variety of features, from responsive layouts to integrated accessibility tools.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/accessibility_ui.jpg", width: 60%),
   caption: [Examples of accessibility features in a modern user interface.#footnote[Source: Gemini]],
@@ -120,43 +184,64 @@ How easy it is for users to accomplish basic tasks the first time they encounter
 
 Effective interfaces rely on the strategic application of visual communication to guide the user's attention and facilitate intuitive interaction.
 
-=== Elements of Visual Communication
-These are the "ingredients" used to build an interface.
-- *Space*: "White space" prevents an interface from feeling cluttered and helps focus attention.
-- *Line*: Used to divide sections or connect related items.
-- *Colour*: Conveys emotion or urgency (e.g., Green for "Success", Red for "Error").
-- *Shape*: Icons use simple shapes (like a magnifying glass for 'search') to represent complex ideas.
-- *Texture and Tone*: Depth and focus are created through shadows (texture) and lightness/darkness (tone).
-- *Form, Proportion, and Scale*: Elements that are more important should be larger (scale) to draw the eye first.
+- *Tone*: The lightness or darkness of a colour, contrasted to provide hierarchy.
 
-#tip-box[
-  *Susan Kare* #index("Kare, Susan") is an artist and graphic designer who created many of the interface elements for the original Apple Macintosh in the 1980s. She designed iconic fonts (like Chicago and Geneva) and many of the original icons (like the trash can, the paint bucket, and the "Happy Mac") that established the visual language of modern computing. Her work proves that even with limited pixels, good design can create a friendly and intuitive interface.#footnote[Source: Kare, S. (2024). *Susan Kare: Icons*. Susan Kare Design.]
+#info-box[
+  *Elements of Visual Communication*:
+  #table(
+    columns: (1fr, 2fr),
+    [*Element*], [*Definition*],
+    [Space], [Used to group data or create zones.],
+    [Point], [Smallest visual element (dots, pixels).],
+    [Colour], [Choice of hue to unify or provide contrast.],
+    [Line], [Directs attention or divides sections.],
+    [Shape], [Two-dimensional zoning around data (e.g., tables).],
+    [Texture], [Inferred tactile features of an object.],
+    [Form], [Visual depth and 3D solid effects.],
+  )
 ]
 
-=== Principles of Visual Communication
-These are the "rules" for combining the elements effectively.
-- *Balance and Contrast*: Contrast (e.g., black text on white background) is essential for readability. Balance can be symmetrical (formal) or asymmetrical (dynamic).
-- *Proximity and Alignment*: Grouping related items together (proximity) helps users understand relationships between data. Alignment creates a sense of order and professionalism.
-- *Repetition and Harmony*: Using the same button style across an entire app creates a sense of unity and reduces the user's "cognitive load."
-- *Hierarchy*: Directing the user's attention to the most important information first. This is often achieved through font weight, size, and colour.
+#women[
+  *Susan Kare* #index("Kare, Susan") is an artist and graphic designer who created many of the interface elements for the original Apple Macintosh in the 1980s. She designed iconic fonts (like Chicago and Geneva) and many of the original icons (like the trash can, the paint bucket, and the "Happy Mac") that established the visual language of modern computing. Her work proves that even with limited pixels, good design can create a friendly and intuitive interface.#footnote[Source: #link("https://kare.com/")[*Susan Kare: Icons*]. Susan Kare Design.]
+
+  #quotation(attribution: "Susan Kare")[Good design's not about what you put in, it's about what you leave out.]
+]
 
 
-#pagebreak(weak: true)
+- *Repetition*: Repeating the same element brings consistency, unity, and cohesion.
+
+#info-box[
+  *Principles of Visual Communication*:
+  #table(
+    columns: (1fr, 2fr),
+    [*Principle*], [*Definition*],
+    [Balance], [Arrangement around a central axis.],
+    [Contrast], [Opposing aesthetic qualities for emphasis.],
+    [Proximity], [Positioning elements to imply relationships.],
+    [Harmony], [Complementary components working as a whole.],
+    [Alignment], [Lining up elements (e.g., form fields).],
+    [Repetition], [Repeated constructs for predictability.],
+    [Hierarchy], [The intended reading order of a design.],
+  )
+]
+
+
+
 #figure(
   image("../images/xkcd_kerning.jpg", width: 60%),
   caption: [The impact of subtle design flaws: Once you notice poor kerning (typography spacing), it's impossible to un-see.#footnote[Source: xkcd.com/1015]],
 )
 
+Professional designers avoid these pitfalls by adhering to the established elements and principles of visual communication.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/visual_comm.jpg", width: 60%),
   caption: [Applying elements and principles of visual communication to UI design.#footnote[Source: Gemini]],
 )
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -164,6 +249,7 @@ These are the "rules" for combining the elements effectively.
     [*Video*: Visual Design Principles for UI -- Mastering hierarchy, contrast, and alignment in digital interfaces. \ https://www.youtube.com/watch?v=uwNClNmekGU],
   )
 ]
+
 
 == Prototyping and Symbolising Ideas
 
@@ -175,16 +261,23 @@ Prototyping is a journey of increasing detail and "fidelity":
 - *Technical Representations*: More formal models like *Schematic Diagrams*, *Wireframes*, and *Mock-ups*. Wireframes are the "blueprints" of a UI, defining where elements sit without focusing on final colours or fonts.
 - *Annotations*: Critical notes that explain the purpose of specific features. For example, an annotation might describe what happens when a user clicks a specific button or how the system should respond to a swipe gesture.
 
+#info-box[
+  *Useful Prototyping Tools*:
+  - Draw.io: link("https://github.com/jgraph/drawio-desktop/releases")
+  - Wireframe.cc: link("https://wireframe.cc/")
+  - Cantunsee (UI Games): link("https://cantunsee.space/")
+]
 
-#pagebreak(weak: true)
+
+
 #figure(
   image("../images/prototype_evolution.jpg", width: 60%),
   caption: [The evolution of a prototype from a rough sketch to a high-fidelity mock-up.#footnote[Source: Gemini]],
 )
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -192,6 +285,7 @@ Prototyping is a journey of increasing detail and "fidelity":
     [*Video*: Low-Fi vs Hi-Fi Prototyping -- When to use each mode in the design cycle. \ https://www.youtube.com/watch?v=sVKtLP85KJU],
   )
 ]
+
 
 == Evaluation and Refinement
 
@@ -204,8 +298,8 @@ Evaluation is an iterative process that occurs throughout the design cycle. It e
 4. *Justified Recommendations*: At the end of a project, developers must explain *why* they made certain changes, using evidence from their testing and evaluation phases.
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -215,22 +309,23 @@ Evaluation is an iterative process that occurs throughout the design cycle. It e
 ]
 
 
-#pagebreak(weak: true)
+
+
 #figure(
   image("../images/xkcd_updates.jpg", width: 50%),
   caption: [The psychological impact of UI updates: users often perceive changes as a disruption to their established mental models.#footnote[Source: xkcd.com/2224]],
 )
 
+Even well-intentioned refinements can sometimes disrupt a user's established workflow if not communicated effectively.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/xkcd_workflow.jpg", width: 60%),
   caption: [The risk of "refinement": every change to a UI breaks someone's established workflow.#footnote[Source: xkcd.com/1172]],
 )
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -239,13 +334,17 @@ Evaluation is an iterative process that occurs throughout the design cycle. It e
   )
 ]
 
+
 #info-box[
-  *Don Norman*, often called the "father of UX," coined the term "User Experience" while working at Apple. His book, *The Design of Everyday Things*, highlights how even simple objects like doors can have "usability" problems, emphasizing that designers are responsible for making technology intuitive. He famously said, "Design is really an act of communication, which means having a deep understanding of the person with whom the designer is communicating."#footnote[Source: Norman, D. (2013). *The Design of Everyday Things*. Basic Books.]
+  *Don Norman*, often called the "father of UX," coined the term "User Experience" while working at Apple. His book, *The Design of Everyday Things*, highlights how even simple objects like doors can have "usability" problems, emphasizing that designers are responsible for making technology intuitive. He famously said, "Design is really an act of communication, which means having a deep understanding of the person with whom the designer is communicating."#footnote[Source: #link("https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/")[Norman, D. (2013). *The Design of Everyday Things*]. Basic Books.]
 ]
 
-#tip-box[
-  *Brenda Laurel* is a pioneer in human-computer interaction (HCI) and VR. She advocated for "design as performance," suggesting that interfaces should be thought of as a stage where users act out their goals. Her work in the 1980s and 90s paved the way for modern interactive media and immersive user experiences. She was also a founder of Purple Moon, a company dedicated to creating digital games specifically designed for girls.#footnote[Source: Laurel, B. (1991). *Computers as Theatre*. Addison-Wesley.]
+#women[
+  *Brenda Laurel* is a pioneer in human-computer interaction (HCI) and VR. She advocated for "design as performance," suggesting that interfaces should be thought of as a stage where users act out their goals. Her work in the 1980s and 90s paved the way for modern interactive media and immersive user experiences. She was also a founder of Purple Moon, a company dedicated to creating digital games specifically designed for girls.#footnote[Source: #link("https://books.google.com/books/about/Computers_as_Theatre.html?id=uU1sAQAAQBAJ")[Laurel, B. (1991). *Computers as Theatre*]. Addison-Wesley.]
+
+  #quotation(attribution: "Brenda Laurel")[Interface is a contact surface. It's a place where two entities... meet and interact.]
 ]
+
 
 == Revision Questions
 1. Differentiate between Accessibility and Effectiveness in the context of a public transport app.
@@ -255,3 +354,4 @@ Evaluation is an iterative process that occurs throughout the design cycle. It e
 5. Identify a user characteristic and explain how it would influence the choice of *Colour* and *Scale* in an interface design.
 6. Provide an example of a "Safety" feature in a professional coding environment (IDE).
 7. What is a "User Persona," and how does it help a designer during the initial phase of a project?
+

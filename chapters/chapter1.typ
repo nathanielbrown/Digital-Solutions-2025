@@ -10,21 +10,68 @@
 - Demonstrate professional communication through technical documentation, visual schematic models, and ethical scholarship.
 
 #important-box[
-  Digital problems are defined as situations where a human need, want, or opportunity can be addressed through a new or re-imagined digital solution. The first and most critical step in the problem-solving process is not coding, but deeply understanding the problem's constituents and the environment in which it exists.
+  Digital problems are defined as situations where a human need, want, or opportunity can be addressed through a new or re-imagined digital solution. The first and most critical step in the problem-solving process is not coding, but deeply understanding the problem's constituents and the environment in which it exists. What distinguishes a digital problem is that the solution consists of digital hardware and software working together to form a digital system.
 ]
 
 == Computational Thinking and Thinking Tools
 
-Computational thinking is a problem-solving methodology that allows us to take a complex problem, understand what the problem is, and develop possible solutions. These solutions can then be presented in a way that either a computer, a human, or both, can understand.
+Computational thinking describes the processes and approaches we draw on when thinking about how a computer can help us to solve complex problems and create systems. We often draw on logical reasoning, algorithms, decomposition, abstraction, and patterns and generalisation when thinking computationally. These solutions can then be presented in a way that either a computer, a human, or both, can understand.
 
 === The Four Pillars of Computational Thinking
 To solve digital problems effectively, developers apply four key techniques:
-1. *Decomposition*: The process of breaking a complex problem down into smaller, more manageable sub-problems. For example, building a mobile game can be decomposed into physics engines, user interface design, asset management, and networking.
-2. *#idx("Abstraction")*: Filtering out unnecessary details to focus on the essential characteristics of a problem. In a mapping app, abstraction involves showing roads and landmarks while hiding individual trees or blade of grass.
-3. *#idx("Pattern Recognition")*: Looking for similarities or trends within problems. If we notice that many users struggle with a specific menu, we recognize a pattern that suggests a UI redesign is needed.
-4. *#idx("Algorithm Design")*: Developing a step-by-step strategy or set of rules to solve the problem. This is the blueprint for the code that will eventually be written.
+1. *Decomposition*: The process of breaking down complex problems into smaller, more manageable parts. With decomposition, problems that seem overwhelming at first become much more manageable. Problems we encounter are ultimately comprised of smaller problems we can more easily address. This process of breaking down problems enables us to analyze the different aspects of them, ground our thinking, and guide ourselves to an end point.
 
-#info-box[
+#figure(
+  image("../images/decomposition_v2.png", width: 80%),
+  caption: [Decomposition breaks down problems into manageable parts.],
+)
+
+2. *#idx("Abstraction")*: Also called pattern generalization, abstraction enables us to navigate complexity and find relevance and clarity at scale. It occurs through filtering out the extraneous and irrelevant in order to identify what's most important and connect each decomposed problem.
+
+#figure(
+  image("../images/abstraction.png", width: 80%),
+  caption: [Abstraction filters out unnecessary details.],
+)
+
+The following video provides a visual walkthrough of how abstraction is applied to simplify complex problems by focusing only on relevant details.
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=V8RxHtoLVTk")[#image("../images/yt_abstraction.jpg", width: 100%)],
+    [*Video*: Computational Thinking: Abstraction -- How to simplify problems by removing unnecessary detail. \ https://www.youtube.com/watch?v=V8RxHtoLVTk],
+  )
+]
+
+3. *#idx("Pattern Recognition")*: Looking for similarities or trends within problems. Specifically, with computational thinking, pattern recognition occurs as people study the different decomposed problems. Through analysis, students recognize patterns or connections among the different pieces of the larger problem.
+
+#figure(
+  image("../images/pattern_recognition.png", width: 80%),
+  caption: [Pattern Recognition finds similarities between decomposed problems.],
+)
+
+Understanding patterns allows developers to reuse solutions and predict behavior in new problem contexts, as explored in the tutorial below.
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=R5sYAzPb9eU")[#image("../images/yt_pattern.jpg", width: 100%)],
+    [*Video*: Computational Thinking: Pattern Recognition -- Identifying trends and similarities to solve problems. \ https://www.youtube.com/watch?v=R5sYAzPb9eU],
+  )
+]
+
+4. *#idx("Algorithm Design")*: Developing a step-by-step strategy or set of rules to solve the problem. Algorithmic thinking is the process for developing an algorithm. With algorithmic thinking, students endeavor to construct a step-by-step process for solving a problem so that the work is replicable by humans or computers.
+
+#figure(
+  image("../images/algorithm.png", width: 80%),
+  caption: [Algorithms are step-by-step strategies to solve problems.],
+)
+
+Algorithmic thinking is the culmination of the computational process, turning abstract ideas into actionable steps.
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -33,17 +80,23 @@ To solve digital problems effectively, developers apply four key techniques:
   )
 ]
 
+
 === Methods of Decomposition
 Decomposition is not just about splitting tasks; it is about strategic analysis. Strategies include:
 - *Top-Down Design*: Starting with the overall purpose of the system and repeatedly breaking it into smaller functional modules.
 - *Data-Oriented Decomposition*: Focusing on how data is transformed as it moves through the system, breaking the problem down based on data inputs, storage requirements, and outputs.
 
 
-#pagebreak(weak: true)
 #figure(
   image("../images/decomposition_diagram.jpg", width: 60%),
   caption: [A decomposition diagram breaking a complex digital solution into functional modules.#footnote[Source: Gemini]],
 )
+
+== Systems Thinking
+
+Systems thinking means looking at a problem in a way that considers the whole picture. It's about understanding how different parts of a system work together and affect each other. This approach helps you see how each part contributes to the system's overall function. By doing this, you can better handle complex problems and deal with uncertainty and risk. It's important to see how solutions, systems, and society are all connected.
+
+In systems thinking, you need to identify and explore how different parts of a system interact. This involves understanding that everything in a system depends on each other. For example, if something changes in one part of a system, it can impact other parts, and this can even affect bigger systems like the economy or society as a whole.
 
 === Thinking Tools for Analysis
 Visualisation tools are essential for exploring problem structures and communicating ideas between stakeholders.
@@ -52,14 +105,14 @@ Visualisation tools are essential for exploring problem structures and communica
 - *Concept Maps*: Focused on identifying the "logical relationships" between entities, such as how a database table for 'Users' relates to a table for 'Orders'.
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/mind_map_example.jpg", width: 60%),
   caption: [An example mind map used for problem analysis in a grade calculator project.#footnote[Source: Gemini]],
 )
 
+While mind maps capture broad dimensions, flowcharts specialize in the step-by-step logic required for functional implementation.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/flowchart_login.jpg", width: 50%),
   caption: [A logic flowchart representing a user authentication process.#footnote[Source: Gemini]],
@@ -71,7 +124,14 @@ In a digital system, logical relationships define how individual components inte
 - *#idx("Process")*: How that data is transformed (e.g., sorting, calculating, validating).
 - *#idx("Output")*: What the system produces (e.g., a screen display, a physical movement of a robotic arm).
 
-#quote(attribution: "Bill Gates")[The computer was born to solve problems that did not exist before.]
+#figure(
+  image("../images/IPO.png", width: 80%),
+  caption: [The Input-Process-Output (IPO) model.],
+)
+
+#quotation(attribution: "Bill Gates")[The computer was born to solve problems that did not exist before.]
+
+#quotation(attribution: "Henry Ford")[If I had asked people what they wanted, they would have said faster horses.#footnote[Source: #link("https://www.thehenryford.org/explore/blog/the-faster-horse-quote/")[The Henry Ford: The Faster Horse Quote].]]
 
 == Identifying Human Needs and Opportunities
 
@@ -93,8 +153,8 @@ Technology solves problems in increasingly complex environments:
 - *#idx("Internet of Things (IoT)")*: Involves connecting everyday objects to the internet, allowing for remote monitoring and automation of environments (e.g., smart agriculture systems that water crops based on soil moisture data).
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -105,25 +165,36 @@ Technology solves problems in increasingly complex environments:
 
 
 
-#pagebreak(weak: true)
+
+
 #figure(
   image("../images/xkcd_automation.jpg", width: 50%),
   caption: [The reality of automation: spending more time on the tool than the task.#footnote[Source: xkcd.com/1319]],
 )
 
+In the modern world, this automation is increasingly driven by a vast ecosystem of interconnected devices.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/iot_ecosystem.jpg", width: 60%),
   caption: [An IoT ecosystem in a smart home environment.#footnote[Source: Gemini]],
 )
 
+These systems often manifest as physical robotics capable of high-precision tasks in industrial settings.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/robotic_arm.jpg", width: 60%),
   caption: [An industrial robotic arm performing precision factory tasks.#footnote[Source: Gemini]],
 )
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=qkIVheIgtWw")[#image("../images/yt_ct.jpg", width: 100%)],
+    [*Video*: How to use a Mindmap -- Effective ways to map out ideas and relationships. \ https://www.youtube.com/watch?v=qkIVheIgtWw],
+  )
+]
+
 
 == Analysing the Solution Environment
 
@@ -135,7 +206,7 @@ The environment includes all the external factors that influence how a solution 
 - *Limitations*: These are the inherent boundaries of the chosen technology or environment, such as the maximum range of a Wi-Fi signal or the battery life of a wearable device.
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/xkcd_tasks.jpg", width: 60%),
   caption: [A humorous look at the difference between "easy" and "impossible" tasks in software development.#footnote[Source: xkcd.com/1425]],
@@ -153,8 +224,8 @@ User Experience (UX) is not just about "looking good"—it's about how the user 
 - *#idx("User Experience (UX)")*: How the user *feels* and *interacts* with the system. Key considerations include the environment and emotional response.
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -163,9 +234,8 @@ User Experience (UX) is not just about "looking good"—it's about how the user 
   )
 ]
 
+These wireframes serve as a blueprint for the final interface, allowing designers to iterate on layout before high-fidelity assets are created.
 
-
-#pagebreak(weak: true)
 #figure(
   image("../images/ux_wireframe.jpg", width: 60%),
   caption: [An annotated wireframe highlighting key UX design considerations.#footnote[Source: Gemini]],
@@ -179,16 +249,67 @@ Success criteria are the "testable" standards used to evaluate the final product
 
 == Social and Economic Impacts
 
-Every digital solution has consequences that extend beyond the user and the developer.
+Every digital solution has consequences that extend beyond the user and the developer. Impacts can be both positive and negative, and considerations should be given to promoting the positive impacts and minimising the negative impacts.
 
 === Impact Analysis Framework
 To evaluate these consequences, we use a structured framework:
-- *Personal Impact*: How does the solution affect the individual? (e.g., privacy, health, cognitive load).
-- *Social Impact*: How does it change how people communicate or how communities interact? (e.g., social media's impact on public discourse).
-- *Economic Impact*: How does it affect jobs, businesses, and global markets? (e.g., automation in manufacturing reducing manual labor but creating demand for robotics technicians).
+
+- *Personal Impact*: Impacts that alter the well-being of individuals. Categories include:
+  - *Health and wellbeing* - physical, mental, emotional and social health of an individual.
+  - *Financial* - individual's material and livelihood security.
+  - *Personal safety* - an individual's protection from dangerous materials, product, processes and people.
+
+- *Social Impact*: Impacts that alter the well-being of the surrounding and wider community. Categories include:
+  - *Health and wellbeing* - the physical, mental, emotional and social health of a population.
+  - *Access to resources* - access to knowledge and participation in social/economic life.
+  - *Social cohesion* - level of social inclusion, social capital and mobility.
+
+- *Economic Impact*: Impacts on an economic system at a local, national or global level. Categories include:
+  - *National economic performance* - changes in unemployment, national income, growth.
+  - *Productivity and efficiency* - the capability to influence or change the production of products and services.
+  - *New services and markets* - the capability to develop new products through technological innovations.
+
+- *Environmental Impact*: Impacts on living and non-living natural systems. Categories include:
+  - *Air quality* - The degree to which the air in a particular place has changed.
+  - *Ecosystem health* - The variety and connections between plant and animal life.
+  - *Energy generation and consumption* - The creation and use of energy.
+
+- *Data Impact*: The storing and accessing of data have unique impacts. Categories include:
+  - *Transparency and accountability* - Enhanced access and sharing improves transparency and empowers users.
+  - *Increased efficiency* - Data linkage across organisations and sectors enables "super-additive" insights.
+
+#info-box[
+  *Impact Goal Table*: Use this tool to plan how your solution will positively influence its environment.
+  #table(
+    columns: (1fr, 1fr),
+    [*Area*], [*Goal/Impact*],
+    [Personal], [How will this improve an individual's life?],
+    [Social], [What is the benefit to the community?],
+    [Economic], [How does it create value or save money?],
+    [Environmental], [How does it minimize harm or help the planet?],
+  )
+]
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=5TeYnuCP6Xo")[#image("../images/yt_impacts.jpg", width: 100%)],
+    [*Video*: Impacts of Technology -- Evaluating the ripple effects of digital solutions. \ https://www.youtube.com/watch?v=5TeYnuCP6Xo],
+  )
+]
 
 === Evaluating Existing Solutions
 Rarely is a problem entirely new. Evaluation involves looking at current solutions to identify their strengths and weaknesses. By analyzing "competitor" apps, developers can find opportunities to innovate by addressing the "fail points" of existing technology.
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=Qz7EwkprvFE")[#image("../images/yt_existing.jpg", width: 100%)],
+    [*Video*: Existing Solutions Analysis -- How to research and learn from what's already out there. \ https://www.youtube.com/watch?v=Qz7EwkprvFE],
+  )
+]
 
 === Emerging Technology Trends
 Modern digital problems are often solved using cutting-edge technologies:
@@ -197,8 +318,8 @@ Modern digital problems are often solved using cutting-edge technologies:
 - *Natural Language Processing (NLP)*: The ability of a computer to understand and respond to human language, enabling more natural "human-computer interaction."
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -209,22 +330,26 @@ Modern digital problems are often solved using cutting-edge technologies:
 
 
 
-#pagebreak(weak: true)
+
+
 #figure(
   image("../images/xkcd_ml.jpg", width: 50%),
   caption: [The "black box" nature of machine learning algorithms.#footnote[Source: xkcd.com/1838]],
 )
 
+Despite the humor, the underlying structure of these 'black boxes' is often a complex network of weighted connections.
 
-#pagebreak(weak: true)
 #figure(
   image("../images/neural_network.jpg", width: 60%),
   caption: [A visualization of an artificial neural network used in deep learning models.#footnote[Source: Gemini]],
 )
 
-#tip-box[
-  *Grace Hopper* #index("Hopper, Grace") was a pioneer of computer programming who invented one of the first linkers (the A-0 system) and popularised machine-independent programming languages, leading to COBOL. She reminds us that innovation often comes from reimagining how we communicate with machines. Her work laid the foundation for the "Abstraction" we use today in high-level programming languages.#footnote[Source: Beyer, K. W. (2009). *Grace Hopper and the Invention of the Information Age*. MIT Press.]
+#women[
+  *Grace Hopper* #index("Hopper, Grace") was a pioneer of computer programming who invented one of the first linkers (the A-0 system) and popularised machine-independent programming languages, leading to COBOL. She reminds us that innovation often comes from reimagining how we communicate with machines. Her work laid the foundation for the "Abstraction" we use today in high-level programming languages.#footnote[Source: Beyer, K. W. (2009). #link("https://mitpress.mit.edu/9780262517263/grace-hopper-and-the-invention-of-the-information-age/")[*Grace Hopper and the Invention of the Information Age*]. MIT Press.]
+
+  #quotation(attribution: "Grace Hopper")[The most dangerous phrase in the language is, 'We've always done it this way.']
 ]
+
 
 == Professional Communication and Documentation
 
@@ -240,8 +365,8 @@ Before any code is written, ideas must be visualized through:
 - *Wireframes*: Low-fidelity visual representations of a user interface.
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -250,9 +375,8 @@ Before any code is written, ideas must be visualized through:
   )
 ]
 
+Even before formal wireframes, quick annotated sketches help developers communicate structural ideas to stakeholders.
 
-
-#pagebreak(weak: true)
 #figure(
   image("../images/annotated_sketch.jpg", width: 60%),
   caption: [An annotated interface sketch for a mobile dashboard.#footnote[Source: Gemini]],
@@ -270,9 +394,33 @@ Ethical scholarship is the practice of accurately attributing ideas and code to 
 - *Referencing*: Using standard conventions (like APA or Harvard) to cite research, images, or historical anecdotes.
 - *Integrity*: Ensuring that success criteria are reported honestly and that data privacy is respected.
 
-#info-box[
-  *The First "Bug"*: In 1947, Grace Hopper's team found a physical moth stuck in a relay of the Harvard Mark II computer. They taped the moth into their logbook and labeled it the "first actual case of bug being found." This historical anecdote serves as a reminder of the meticulous nature required in digital problem analysis and the importance of accurate documentation.#footnote[Source: National Museum of American History, Smithsonian Institution (Logbook of the Harvard Mark II).]
+#women[
+  *The First "Bug"*: In 1947, Grace Hopper's team found a physical moth stuck in a relay of the Harvard Mark II computer. They taped the moth into their logbook and labeled it the "first actual case of bug being found." This historical anecdote serves as a reminder of the meticulous nature required in digital problem analysis and the importance of accurate documentation.#footnote[Source: #link("https://americanhistory.si.edu/collections/search/object/nmah_334632")[National Museum of American History, Smithsonian Institution (Logbook of the Harvard Mark II)].]
 ]
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=KDCYc_0h13g")[#image("../images/yt_privacy.jpg", width: 100%)],
+    [*Video*: Privacy and Ethics -- Navigating the complex landscape of digital rights and responsibilities. \ https://www.youtube.com/watch?v=KDCYc_0h13g],
+  )
+]
+
+
+== Online Resources
+
+To deepen your understanding of digital problem-solving and thinking tools, explore the following curated resources:
+
+- *Thinking Tools*:
+  - #link("https://app.mindmapmaker.org/")[Mindmap Maker] -- A free online tool for brainstorming and decomposition.
+  - #link("https://github.com/jgraph/drawio-desktop/releases")[Draw.io (Diagrams.net)] -- Professional software for creating flowcharts and logic diagrams.
+- *Industry Standards*:
+  - #link("https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/")[The Joel Test] -- 12 steps to better code and functional specifications.
+  - #link("https://www.joelonsoftware.com/2000/10/02/painless-functional-specifications-part-1-why-bother/")[Painless Functional Specifications] -- Why detailed documentation is critical for success.
+- *Impact and Ethics*:
+  - #link("https://www.futurelearn.com/info/courses/measuring-entrepreneurial-impact/0/steps/55997")[Measuring Entrepreneurial Impact] -- A guide to evaluating the broader ripple effects of new solutions.
+  - #link("https://www.fasttrackimpact.com/post/2019/03/18/research-impact-planning")[Impact Planning Template] -- Strategic planning for personal, social, and economic benefits.
 
 == Revision Questions
 
@@ -282,3 +430,4 @@ Ethical scholarship is the practice of accurately attributing ideas and code to 
 4. Use the *Impact Analysis Framework* to evaluate the potential personal, social, and economic impacts of an AI-driven medical diagnostic tool.
 5. Describe two different *Thinking Tools* and explain when you would use one over the other.
 6. What is the difference between a *Functional Requirement* and a *Non-Functional Requirement*? Give an example of each for a school database system.
+

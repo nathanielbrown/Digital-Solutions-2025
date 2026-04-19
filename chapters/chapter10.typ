@@ -12,6 +12,8 @@
 == Prototyping and Visual Design
 Prototyping is an iterative process that allows developers to test ideas and gather feedback before full-scale implementation.
 
+#quotation(attribution: "Tom Chi")[Doing is the best way of thinking.#footnote[Source: #link("https://www.tomchi.com/")[TomChi.com].]]
+
 === Idea Refinement
 Students must refine initial concepts for individual components to ensure *technical feasibility*. This involves assessing whether a proposed feature can be realistically built with available tools and resources [cite: 688].
 
@@ -35,7 +37,7 @@ Applying visual communication elements (like space and colour) and principles (l
 The process concludes with a *demonstration*, where a working prototype is presented to stakeholders to validate the direction of the solution [cite: 689].
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/ux_wireframe.jpg", width: 80%),
   caption: [Wireframing is a critical step in low-fidelity prototyping.],
@@ -47,9 +49,12 @@ Moving from design to code requires the generation of functional modules and rob
 === Programmed Modules
 Students generate functional modules that interact with users, handle 2D data sources, and validate data inputs. These modules form the logical core of the digital solution [cite: 707, 708, 709, 710].
 
-#tip-box[
-  *Evelyn Berezin* #index("Berezin, Evelyn") (1925–2018) was an American computer scientist who invented the first computer-driven word processor. Her company, Redactron, produced the "Data Secretary" in 1971, which revolutionized office work by allowing users to edit and store documents digitally. Her work on large-scale automated systems, including the first computerized airline reservation system for United Airlines, demonstrated the power of digital innovation to solve complex organizational problems.#footnote[Source: The New York Times. *Evelyn Berezin, 93, Dies; Pioneer of the Word Processor* (2018).]
+#women[
+  *Evelyn Berezin* #index("Berezin, Evelyn") (1925–2018) was an American computer scientist who invented the first computer-driven word processor. Her company, Redactron, produced the "Data Secretary" in 1971, which revolutionized office work by allowing users to edit and store documents digitally. Her work on large-scale automated systems, including the first computerized airline reservation system for United Airlines, demonstrated the power of digital innovation to solve complex organizational problems.#footnote[Source: #link("https://www.nytimes.com/2018/12/10/obituaries/evelyn-berezin-dead.html")[The New York Times. *Evelyn Berezin, 93, Dies; Pioneer of the Word Processor* (2018)].]
+
+  #quotation(attribution: "Evelyn Berezin")[They said to me, 'Design a computer,' I had never seen one before. Hardly anyone else had.]
 ]
+
 
 === File Operations
 Robust solutions often need to persist data outside of a database. Implementation includes code that can:
@@ -61,7 +66,7 @@ Robust solutions often need to persist data outside of a database. Implementatio
 Programming development tools are used to generate code that controls all interactions within the solution [cite: 705, 711]. Throughout this process, consistent *code comments* are used to communicate and clarify the purpose of each statement, ensuring the project remains maintainable [cite: 712].
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/prototype_evolution.jpg", width: 80%),
   caption: [The evolution of a prototype from conceptual logic to functional system.],
@@ -79,19 +84,28 @@ Students use *#idx("Data Definition Language (DDL)")* to manage the structure of
 === Data Modification (DML)
 *#idx("Data Manipulation Language (DML)")* is used to manage the information stored within those structures. This involves implementing `INSERT`, `UPDATE`, and `DELETE` operations [cite: 691].
 
-#proof-box[
-  *SQL Walkthrough: Building a User Base*
+#code-box[
+  *Pseudocode Plan: Building a User Base*
+  ```pseudocode
+  CREATE TABLE Users
+  DEFINE ID (PK)
+  DEFINE Username
+  DEFINE Date
+  
+  INSERT INTO Users
+  VALUES (1, 'Alice', TODAY)
+  ```
+
+  *SQL Implementation*
   ```sql
-  -- DDL: Create the structure
   CREATE TABLE Users (
     UserID INT PRIMARY KEY,
-    Username VARCHAR(50) NOT NULL,
+    Username VARCHAR(50),
     JoinDate DATE
   );
-  
-  -- DML: Insert the data
-  INSERT INTO Users (UserID, Username, JoinDate)
-  VALUES (1, 'AliceTech', '2024-04-18');
+
+  INSERT INTO Users 
+  VALUES (1, 'Alice', '2024');
   ```
 ]
 
@@ -126,44 +140,99 @@ Students apply *#idx("systems thinking")* to develop a model that identifies:
 Synthesis is the process of integrating the user interface, processing logic, and data components to form a coherent, functional prototype digital solution [cite: 713].
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
-    link("https://www.youtube.com/watch?v=JMjozqJSv2M")[#image("../images/yt_prototype.jpg", width: 100%)],
-    [*Video*: The Prototyping Process -- From conceptual logic to a functional user interface. \ https://www.youtube.com/watch?v=JMjozqJSv2M],
+    link("https://www.youtube.com/watch?v=0ZT26bKr2Gc")[#image("../images/yt_hi_fi_prototype.jpg", width: 100%)],
+    [*Video*: High-Fidelity Prototyping -- Adding visual polish and interactivity to your solution. \ https://www.youtube.com/watch?v=0ZT26bKr2Gc],
   )
 ]
 
-== Testing, Evaluation, and Refinement
-The final phase of prototyping is a rigorous evaluation to ensure the solution is robust, effective, and user-friendly.
 
-=== Algorithm Appraisal
-Algorithms are evaluated for their *reliability*, *maintainability*, *efficiency*, *effectiveness*, and *usability*. Based on this appraisal, developers make justified recommendations for further refinement [cite: 716].
+== Testing and Evaluation
+Testing is a rigorous process to ensure the solution meets the user's needs and operates as intended.
 
-=== Technical Debugging
-Computational thinking processes, such as *desk checks* and automated debugging techniques, are used to identify and fix logical and syntax errors in program modules [cite: 717, 718].
+=== Success Criteria: The Roadmap to Success
+Before testing begins, students must establish clear *#idx("Success Criteria")*. These are measurable benchmarks used to evaluate the effectiveness of the solution.
+- *#idx("Functional Requirements")*: What the solution *must do* (e.g., "The system must authenticate users via a secure login").
+- *#idx("Non-functional Requirements")*: How the solution *performs* (e.g., "The login page must load in under 2 seconds").
 
-=== Usability Testing
-User interfaces are refined through:
-- *Heuristic Reviews*: Comparing the UI against established usability principles.
-- *UX Testing*: Observing and recording real user interactions to identify friction points [cite: 718, 719, 721].
+=== Prioritisation: The MuSCoW Method
+Not all requirements are created equal. The *#idx("MuSCoW")* method helps developers prioritise features:
+- *Must have*: Essential for the solution to function.
+- *Should have*: Important but not critical for the first version.
+- *Could have*: Desirable features if time and resources allow.
+- *Won't have*: Features explicitly excluded from the current scope.
 
-=== Impact and Success Evaluation
-The final prototype is appraised against the initial *success criteria*. This evaluation determines whether the solution successfully addresses the identified problem and meets the needs of its stakeholders [cite: 722, 723, 724, 720].
+#figure(
+  image("../images/muscow_table.png", width: 80%),
+  caption: [Example of a MuSCoW prioritisation table.#footnote[Source: digital-solutions-text-2025]],
+)
+
+=== Implementation Testing
+Students use a structured approach to verify their code:
+1. *#idx("Unit Testing")*: Testing individual functions or components in isolation (e.g., testing a single database query).
+2. *#idx("Integration Testing")*: Testing how different components work together (e.g., verifying that a web form correctly saves data to the database).
+
+#proof-box[
+  *Testing Documentation*
+  A good test log includes the *Test Case*, *Input*, *Expected Outcome*, *Actual Outcome*, and any *Action Taken* if the test failed. This provides evidence of iterative refinement and technical problem-solving.
+
+  #table(
+    columns: (1fr, 1.5fr, 1.5fr, 0.5fr),
+    [*Feature*], [*Testing Action*], [*Expected Result*], [*Status*],
+    [Login], [Input incorrect password], [Access denied], [Pass],
+    [Create], [Add new test record], [Visible in main list], [Pass],
+    [Delete], [Remove test record], [No longer in database], [Pass],
+  )
+]
+
+=== Appraisal and Evaluation
+The final step is to *appraise* the solution against the initial success criteria. This involves:
+- *Evaluating Effectiveness*: Did the solution solve the original problem?
+- *Impact Analysis*: What were the personal, social, and economic impacts of the solution?
+- *Recommendations for Improvement*: Based on test results and user feedback, what should be changed in future versions? [cite: 746, 750].
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=L93LOjDSByg")[#image("../images/yt_eval_prototype.jpg", width: 100%)],
+    [*Video*: Evaluation of Prototypes -- Using feedback to refine and improve your final product. \ https://www.youtube.com/watch?v=L93LOjDSByg],
+  )
+]
+
+The appraisal process often uncovers subtle logic errors that require careful debugging to resolve.
 
 #figure(
   image("../images/xkcd_debugging.jpg", width: 80%),
   caption: [Debugging is as much about persistence as it is about logic!#footnote[Source: xkcd.com/1722]],
 )
 
+== Online Resources
+
+To refine your innovative solutions and master technical implementation, utilize these professional development resources:
+
+- *Advanced SQL (DDL and DML)*:
+  - #link("https://www.w3schools.com/sql/sql_create_table.asp")[W3Schools: Data Definition] -- Learn to use the `CREATE`, `ALTER`, and `DROP` statements to manage database structures.
+  - #link("https://www.sqlitetutorial.net/sqlite-dml/")[SQLite DML Operations] -- A comprehensive guide to inserting, updating, and deleting data within an SQLite environment.
+- *Prototyping and Synthesis*:
+  - #link("https://www.uisources.com/screenshots")[UI Sources] -- Analyze real-world interactions and high-fidelity prototypes for design inspiration.
+  - #link("https://wireframe.cc/")[Wireframe.cc] -- A specialized tool for creating low-fidelity UI prototypes and mapping user journeys.
+- *Requirements and Evaluation*:
+  - #link("https://www.geeksforgeeks.org/how-to-set-product-goals-initiatives-a-complete-guide-for-product-managers/")[Setting Product Goals and Requirements] -- A professional guide to defining measurable success criteria.
+  - #link("https://digisoln.com/evaluation.html")[Evaluating Digital Solutions] -- Strategies for appraising final prototypes and justifying technical recommendations.
+
 == Revision Questions
-1. Compare *low-fidelity* and *high-fidelity* prototyping. When is each most appropriate?
-2. Explain the difference between *Data Definition Language (DDL)* and *Data Manipulation Language (DML)*.
-3. List the five metrics used to appraise an algorithm.
-4. How does *heuristic review* differ from *UX testing*?
-5. Why is it necessary to justify the selection of specific data sources in a technical solution?
-6. Describe how *systems thinking* helps in identifying system boundaries.
+
+1. Why is *Technical Feasibility* a critical consideration during the refinement of a digital concept?
+2. Differentiate between *Data Definition Language (DDL)* and *Data Manipulation Language (DML)* using SQL examples.
+3. Describe the five stages of *File Operations* and explain why closing a file is essential for data integrity.
+4. What is *Systems Thinking*, and how does it help a developer manage the "ripple effect" of changes in a project?
+5. Explain the *MuSCoW Method* and how it assists in prioritizing solution requirements.
+6. How does *Integration Testing* differ from *Unit Testing*? Provide an example of each.
+7. Why are *Justified Recommendations* an essential part of the evaluation phase of a digital project?
 
 ---

@@ -50,9 +50,29 @@ Project management tools (like Gantt charts or Kanban boards) are used to track:
 - *Dependencies*: Which tasks must be completed before others can begin.
 - *Resources*: The people and technology required for each stage [cite: 649].
 
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=aTEK0BmsH-g")[#image("../images/yt_agile.jpg", width: 100%)],
+    [*Video*: Agile Software Development -- An iterative approach to managing digital projects. \ https://www.youtube.com/watch?v=aTEK0BmsH-g],
+  )
+]
 
-#pagebreak(weak: true)
-#info-box[
+To keep these iterative projects on track, developers use visual timelines like Gantt charts to manage task dependencies.
+
+#video[
+  #grid(
+    columns: (100pt, 1fr),
+    column-gutter: 1em,
+    link("https://www.youtube.com/watch?v=4DSV-_2pqmI")[#image("../images/yt_gantt.jpg", width: 100%)],
+    [*Video*: How to use a Gantt Chart -- Visualizing project timelines and task dependencies. \ https://www.youtube.com/watch?v=4DSV-_2pqmI],
+  )
+]
+
+
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -62,7 +82,8 @@ Project management tools (like Gantt charts or Kanban boards) are used to track:
 ]
 
 
-#pagebreak(weak: true)
+
+
 #figure(
   image("../images/project_management_kanban.jpg", width: 80%),
   caption: [Using Kanban boards to visualize and manage project tasks effectively.],
@@ -72,7 +93,7 @@ Project management tools (like Gantt charts or Kanban boards) are used to track:
 Effective project management involves constant evaluation. Through innovation and collaboration, teams can assess potential ideas to find the most effective approach for the given problem [cite: 660].
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/xkcd_workflow.jpg", width: 80%),
   caption: [A well-defined workflow is the backbone of successful development!#footnote[Source: xkcd.com/1172]],
@@ -107,7 +128,7 @@ Students must choose the most appropriate way to store data. This involves compa
 Furthermore, different *file formats* (like JSON vs. XML) and *data structures* (like arrays vs. dictionaries) are evaluated to determine their suitability for the project context [cite: 661, 662].
 
 
-#pagebreak(weak: true)
+
 #figure(
   image("../images/ipo_model.jpg", width: 80%),
   caption: [The IPO model provides a simple yet powerful framework for system analysis.],
@@ -131,20 +152,71 @@ Students apply core computational thinking processes to identify possible algori
   - *Creating*: They add `i = i - 1` to fix the logic.
 ]
 
-=== Basic Constructs
-Algorithm implementation utilizes fundamental building blocks:
-- *Assignment*: Storing values.
-- *Sequence*: Linear execution of steps.
-- *Selection & Condition*: decision-making logic.
-- *Iteration*: Repeating tasks (loops).
-- *Modularisation*: Dividing the program into small, manageable modules [cite: 665].
+=== #idx("Algorithmic Design") and Pseudocode
+Algorithm implementation utilizes fundamental building blocks: *assignment*, *sequence*, *selection*, *iteration*, and *modularisation*.
 
-=== Drafting and Documentation
-Well-ordered and unambiguous algorithms are drafted using *pseudocode*. This ensures that data validation and presentation logic are planned before coding begins [cite: 672, 674]. High modularity and readability are maintained by using language-correct *comment syntax* to explain the purpose of each module [cite: 663, 675].
+==== QCAA Pseudocode Standards
+To ensure consistency, the QCAA has established specific rules for representing algorithms:
+- *Keywords*: Written in *BOLD* and *CAPITALIZED* (e.g., *BEGIN*, *IF*, *THEN*, *WHILE*, *FOR*).
+- *Snake Case*: Use `snake_case` for all variable and function names (e.g., `user_input`).
+- *Calculations*: Clearly indicate the formula (e.g., *CALCULATE* `net = gross - tax`).
+- *Indentation*: Essential for showing the scope of loops and selections.
+- *Monospaced Font*: Always use a monospaced typeface (like Courier New or Consolas) for algorithms.
+
+#figure(
+  image("../images/pseudocode.png", width: 80%),
+  caption: [Example of well-structured pseudocode following QCAA standards.#footnote[Source: digital-solutions-text-v2]],
+)
+
+#code-box[
+  *Pseudocode Plan: Modularised Loop*
+  ```pseudocode
+  BEGIN calculate_total
+    SET total = 0
+    FOR count = 1 TO 5
+      INPUT mark
+      total = total + mark
+    NEXT count
+    OUTPUT total
+  END
+  ```
+
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 1em,
+    [
+      *JavaScript Implementation*
+      ```javascript
+      function calculateTotal() {
+        let total = 0;
+        for (let count = 0; count < 5; count++) {
+          let mark = parseInt(prompt("Mark: "));
+          total += mark;
+        }
+        console.log(total);
+      }
+      ```
+    ],
+    [
+      *Python Implementation*
+      ```python
+      def calculate_total():
+          total = 0
+          for count in range(5):
+              mark = int(input("Mark: "))
+              total += mark
+          print(total)
+      ```
+    ]
+  )
+]
+
+=== Documentation: Data Dictionaries
+Beyond pseudocode, technical proposals should include *#idx("Data Dictionaries")* to define the specific data types, sizes, and constraints for every variable and database field used in the system [cite: 661].
 
 
-#pagebreak(weak: true)
-#info-box[
+
+#video[
   #grid(
     columns: (100pt, 1fr),
     column-gutter: 1em,
@@ -153,9 +225,13 @@ Well-ordered and unambiguous algorithms are drafted using *pseudocode*. This ens
   )
 ]
 
-#tip-box[
-  *Radia Perlman* #index("Perlman, Radia") is an American software designer and network engineer. She is most famous for her invention of the Spanning Tree Protocol (STP), which is fundamental to the operation of network bridges and keeps the internet running smoothly!#footnote[Source: Perlman, R. (1985). *An algorithm for distributed computation of a spanning tree in an extended LAN*. ACM SIGCOMM Computer Communication Review, 15(4), 44–53.]
+
+#women[
+  *Radia Perlman* #index("Perlman, Radia") is an American software designer and network engineer. She is most famous for her invention of the Spanning Tree Protocol (STP), which is fundamental to the operation of network bridges and keeps the internet running smoothly!#footnote[Source: #link("https://www.internethalloffame.org/inductees/radia-perlman")[Perlman, R. (1985). *An algorithm for distributed computation of a spanning tree in an extended LAN*]. ACM SIGCOMM Computer Communication Review, 15(4), 44–53.]
+
+  #quotation(attribution: "Radia Perlman")[The world would be a better place if more engineers, like me, hated technology.]
 ]
+
 
 === The Technical Proposal
 The final stage of the planning phase is communicating the proposed solution to stakeholders.
@@ -179,12 +255,28 @@ Visuals are used to clarify complex information about the problem and the progra
   caption: [Using visual communication to clarify technical proposals.],
 )
 
+== Online Resources
+
+To manage your digital projects effectively and communicate your technical proposals with professional clarity, explore these industry-standard tools:
+
+- *Project Management and Collaboration*:
+  - #link("https://trello.com/")[Trello] -- A popular Kanban-style tool for organizing tasks, milestones, and project dependencies.
+  - #link("https://gantt.io/")[Gantt.io] -- A specialized platform for creating visual timelines and managing project schedules.
+  - #link("https://www.atlassian.com/agile/kanban")[Atlassian: Kanban Explained] -- A deep dive into the methodology used for iterative digital development.
+- *Algorithmic and System Modeling*:
+  - #link("https://www.lucidchart.com/")[Lucidchart] -- A professional tool for creating DFDs, ERDs, and system architecture diagrams.
+  - #link("https://www.drawio.com/")[Diagrams.net (Draw.io)] -- A high-quality, free alternative for mapping system logic and data movement.
+- *Technical Communication*:
+  - #link("https://www.geeksforgeeks.org/how-to-write-a-technical-proposal/")[GeeksforGeeks: Writing Technical Proposals] -- A guide to structuring and tailoring your message for specific audiences.
+
 == Revision Questions
-1. Differentiate between *Functional* and *Non-functional* requirements.
-2. How do *success criteria* help in the final evaluation of a digital solution?
-3. Contrast *relational databases* with *flat-file structures*. Which is better for a complex system with linked data?
-4. Identify the four core processes of *Computational Thinking*.
-5. Why is it important to tailor a *technical proposal* to a specific audience?
-6. Explain the role of *modularisation* in making an algorithm readable and maintainable.
+
+1. Describe the difference between *Functional* and *Non-functional Requirements* using an example.
+2. What are *Success Criteria*, and how do they differ from project constraints?
+3. Explain how a *Kanban Board* helps a development team manage an iterative workflow.
+4. Draw a simple *IPO model* for a digital alarm clock system.
+5. Why is it important to define *Data Dictionaries* before implementing a database?
+6. What are the key features of the *QCAA Pseudocode Standard* for representing algorithms?
+7. How should a *Technical Proposal* be tailored when presenting to a business manager versus a software engineer?
 
 ---
